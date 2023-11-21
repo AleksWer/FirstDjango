@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block style %}
+    <title>Index page</title>
+{% endblock %}
+
+{% block content %}
+{% include 'header.html' %}
+
+    <h1> Главная страница сайта </h1>
+        Меня зовут: <i> {{ name }} </i><br>
+        Мой email для связи: <i>{{ email }}</i><br>
+
+        <i>Этот сайт в разработке</i>
+        
+
+{% include 'footer.html' %}
+{% endblock %}

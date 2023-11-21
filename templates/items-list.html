@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block style %}
+
+    <title>Items page</title>
+    {{ block.super }}
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'header.html' %}
+
+    <h2>Список товаров</h2>
+        {% for item in items %}
+            <div class="items-list"> <a href="{% url 'item-detail' item.id %}"> {{ item.name }} </a> </div>
+        {% endfor %}      
+
+{% include 'footer.html' %}
+{% endblock %}
